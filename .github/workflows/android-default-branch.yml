@@ -38,5 +38,5 @@ jobs:
       - name: Upload APK
         uses: actions/upload-artifact@v2
         with:
-          name: readrops-release
+          name: ${{ github.event.repository.name }}-release
           path: ${{ steps.sign.outputs.signedReleaseFile }}
